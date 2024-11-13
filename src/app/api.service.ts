@@ -7,9 +7,11 @@ import { Observable } from 'rxjs';
   providedIn: 'root', // Makes the service available application-wide
 })
 export class ApiService {
-  private apiUrl = 'localhost:8080/users';  // Replace with your API URL
+  private apiUrl = 'http://localhost:8080/users';  // Replace with your API URL
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) {
+    console.log('shhhocks');
+  }
 
   // Send POST request to register the user
   registerUser(userData: any): Observable<any> {

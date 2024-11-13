@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
 @Injectable({
@@ -7,12 +7,17 @@ import { Observable } from 'rxjs';
 })
 export class UserService {
 
-  private apiUrl = 'localhost:8080/users';  // Replace with your backend API URL
+  private apiUrl = 'http://localhost:8080/users';  // Replace with your backend API URL
 
   constructor(private http: HttpClient) {}
 
   // Send POST request to register the user
-  registerUser(userData: any): Observable<any> {
+/*   registerUser(userData: any): Observable<any> {
     return this.http.post(this.apiUrl, userData);
+  } */
+
+  registerUser(userData: any): Observable<any> {
+    const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
+    return this.http.post(this.apiUrl, userData, { headers });
   }
 }

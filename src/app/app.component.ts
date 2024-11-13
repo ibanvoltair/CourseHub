@@ -41,5 +41,7 @@ export class AppComponent implements OnInit{
         console.error('Error adding post', error);
       }
     ); */
+
+    
   }
 }
