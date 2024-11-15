@@ -1,0 +1,55 @@
+<section>
+    <!-- Nav -->
+    <div></div>
+    <!-- Body -->
+    <div class="section-body">
+        <div class="header">
+
+        </div>
+
+        <div class="container">
+            <header>Registration Form</header>
+            <form (ngSubmit)="onSubmit()" class="form">
+            <div class="column">
+                <div class="input-box">
+                <label>First Name</label>
+                <input [(ngModel)]="firstName"  name="firstName" type="text" placeholder="Enter First Name" required />
+                </div>
+                <div class="input-box">
+                <label>Last Name</label>
+                <input [(ngModel)]="lastName" name="lastName" type="text" placeholder="Enter Last Name" required />
+                </div>
+            </div>
+        
+            <div class="input-box">
+                <label>Password</label>
+                <input [(ngModel)]="password" name="password" type="password" placeholder="Enter your password" required />
+            </div>
+        
+            <div class="input-box">
+                <label>Confirm Password</label>
+                <input [(ngModel)]="confirmPassword" name="confirmPassword" type="password" placeholder="Confirm Password" required />
+            </div>
+        
+            <div class="column">
+                <div class="input-box">
+                <label>Phone Number</label>
+                <input [(ngModel)]="phoneNumber" name="phoneNumber" type="number" placeholder="Enter phone number" required />
+                </div>
+                <div class="input-box">
+                <label>Birth Date</label>
+                <input [(ngModel)]="birthDate" name="birthDate" type="date" required />
+                </div>
+            </div>
+        
+                <div class="input-box">
+                    <label>Email</label>
+                    <input [(ngModel)]="email"  name="email" type="email" placeholder="Enter your email" required />
+                </div>
+        
+            <button type="submit">Register</button>
+            </form>
+        </div>
+    </div>
+  </section>
+  
