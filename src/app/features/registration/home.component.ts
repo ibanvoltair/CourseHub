@@ -36,26 +36,12 @@ export class HomeComponent {
       email: this.email
     };
 
-    console.log('User data:', userData);
-
     this.userService.registerUser(userData).subscribe(response => {
-      console.log('User registered:', response);
-      alert('Registration Successful!');
     }, error => {
       console.error('Error registering user:', error);
       alert('Registration failed');
     });
 
-    // Method to navigate to a different page
     this.router.navigate(['/courses']);
-  
-/*     this.router.navigateByUrl('/courses').then(success => {
-      if (success) {
-        console.log('Navigation to /courses successful');
-      } else {
-        console.error('Navigation to /courses failed');
-      }
-    }); */
-
   }
 }
