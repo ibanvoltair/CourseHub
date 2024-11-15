@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { UserService } from '../../services/user.service';  // import the user service
 import { FormsModule } from '@angular/forms';  // Import FormsModule here
+import { RouterModule, Router } from '@angular/router';
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [ FormsModule],
+  imports: [ FormsModule, RouterModule ],
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss'],
 })
@@ -17,7 +18,7 @@ export class HomeComponent {
   birthDate: string = '';
   email: string = '';
 
-  constructor(private userService: UserService) {}
+  constructor(private userService: UserService, private router: Router) {}
 
   // Handle form submission
   onSubmit() {
@@ -26,37 +27,7 @@ export class HomeComponent {
       return;
     }
 
-    const generateUserId = () => {
-      
-
-      // Extract year, month, and day from the birthdate
-      const [year, month, day] = this.birthDate.split('-');
-    
-      // Convert the initials to their ASCII codes
-      const firstNameCode = this.firstName ? this.firstName.charCodeAt(0) : 0;
-      const lastNameCode = this.lastName ? this.lastName.charCodeAt(0) : 0;
-
-      // Convert phoneNumber to string in case it's a number
-      const phone = String(this.phoneNumber);
-    
-      // Extract the last 4 digits of the phone number
-      const phoneSuffix = phone.slice(-4);
-    
-      // Generate a random 3-digit number for uniqueness
-      const randomDigits = Math.floor(100 + Math.random() * 900);
-    
-      // Construct the user ID by combining parts as integers
-      // Format: YYYYMMDD + FirstNameCode + LastNameCode + Last4DigitsOfPhone + RandomDigits
-      const userId = parseInt(
-        `${year}${month}${day}${firstNameCode}${lastNameCode}${phoneSuffix}${randomDigits}`,
-        10
-      );
-    
-      return userId;
-    }
-
     const userData = {
-      userId: 5,
       firstName: this.firstName,
       lastName: this.lastName,
       password: this.password,
@@ -74,5 +45,17 @@ export class HomeComponent {
       console.error('Error registering user:', error);
       alert('Registration failed');
     });
+
+    // Method to navigate to a different page
+    this.router.navigate(['/courses']);
+  
+/*     this.router.navigateByUrl('/courses').then(success => {
+      if (success) {
+        console.log('Navigation to /courses successful');
+      } else {
+        console.error('Navigation to /courses failed');
+      }
+    }); */
+
   }
 }
