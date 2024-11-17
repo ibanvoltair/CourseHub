@@ -13,11 +13,24 @@
             <div class="column">
                 <div class="input-box">
                 <label>First Name</label>
-                <input [(ngModel)]="firstName"  name="firstName" type="text" placeholder="Enter First Name" required />
+                <input [(ngModel)]="firstName"  name="firstName" type="text" placeholder="Enter First Name" required #firstNameRef="ngModel"/>
+                <span>Please fill in your name</span>
+
+
+                <!-- Error Messages -->
+                <div *ngIf="firstNameRef.invalid && firstNameRef.touched" class="error-messages">
+                <p *ngIf="firstNameRef.errors?.required">First Name is required.</p>
                 </div>
+                </div>
+
                 <div class="input-box">
                 <label>Last Name</label>
                 <input [(ngModel)]="lastName" name="lastName" type="text" placeholder="Enter Last Name" required />
+
+                <!-- Error Messages -->
+                <div *ngIf="lastNameRef.invalid && lastNameRef.touched" class="error-messages">
+                <p *ngIf="lastNameRef.errors?.required">Last Name is required.</p>
+                </div>
                 </div>
             </div>
         
@@ -35,19 +48,36 @@
                 <div class="input-box">
                 <label>Phone Number</label>
                 <input [(ngModel)]="phoneNumber" name="phoneNumber" type="number" placeholder="Enter phone number" required />
+
+                <!-- Error Messages -->
+                <div *ngIf="phoneNumberRef.invalid && phoneNumberRef.touched" class="error-messages">
+                <p *ngIf="phoneNumberRef.errors?.required">Phone Number is required.</p>
                 </div>
+                </div>
+
                 <div class="input-box">
                 <label>Birth Date</label>
                 <input [(ngModel)]="birthDate" name="birthDate" type="date" required />
+
+                <!-- Error Messages -->
+                <div *ngIf="birthDateRef.invalid && birthDateRef.touched" class="error-messages">
+                <p *ngIf="birthDateRef.errors?.required">Birth Date is required.</p>
+                </div>
                 </div>
             </div>
                 <div class="input-box">
                     <label>Email</label>
                     <input [(ngModel)]="email"  name="email" type="email" placeholder="Enter your email" required />
+
+                <!-- Error Messages -->
+                <div *ngIf="emailRef.invalid && emailRef.touched" class="error-messages">
+                <p *ngIf="emailRef.errors?.required">Email is required.</p>
+                </div>
                 </div>
             <button type="submit">Register</button>
             </form>
         </div>
     </div>
   </section>
+
   
