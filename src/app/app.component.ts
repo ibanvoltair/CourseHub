@@ -20,7 +20,6 @@ export class AppComponent implements OnInit{
   constructor(private apiService: ApiService) {}
 
   ngOnInit(): void {
-    console.log('running')
     // Fetching data on component initialization
   }
 }
