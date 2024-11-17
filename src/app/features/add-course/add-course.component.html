@@ -3,35 +3,35 @@
     <top-nav></top-nav>
     <!-- Body -->
     <div class="section-body">
-        <div class="header">
+       <!--  <div class="header">
 
-        </div>
+        </div> -->
 
         <div class="container">
-            <header>Registration Form</header>
+            <header>Add a Course | Book </header>
             <form (ngSubmit)="onSubmit()" class="form">
             <div class="column">
                 <div class="input-box">
-                <label>First Name</label>
-                <input [(ngModel)]="firstName"  name="firstName" type="text" placeholder="Enter First Name" required />
+                <label>Course or Book Name</label>
+                <input [(ngModel)]="course"  name="course or book name" type="text" placeholder="Enter Course / Book name" required />
                 </div>
-                <div class="input-box">
+              <!--   <div class="input-box">
                 <label>Last Name</label>
                 <input [(ngModel)]="lastName" name="lastName" type="text" placeholder="Enter Last Name" required />
-                </div>
+                </div> -->
             </div>
         
             <div class="input-box">
-                <label>Password</label>
-                <input [(ngModel)]="password" name="password" type="password" placeholder="Enter your password" required />
+                <label>Author</label>
+                <input [(ngModel)]="author" name="author" type="author" placeholder="Enter author's name" required />
             </div>
         
             <div class="input-box">
-                <label>Confirm Password</label>
-                <input [(ngModel)]="confirmPassword" name="confirmPassword" type="password" placeholder="Confirm Password" required />
+                <label>Image Url</label>
+                <input [(ngModel)]="imageUrl" name="imageUrl" type="imageUrl" placeholder="Image link" required />
             </div>
         
-            <div class="column">
+        <!--     <div class="column">
                 <div class="input-box">
                 <label>Phone Number</label>
                 <input [(ngModel)]="phoneNumber" name="phoneNumber" type="number" placeholder="Enter phone number" required />
@@ -40,12 +40,14 @@
                 <label>Birth Date</label>
                 <input [(ngModel)]="birthDate" name="birthDate" type="date" required />
                 </div>
-            </div>
+            </div> -->
+        
                 <div class="input-box">
-                    <label>Email</label>
-                    <input [(ngModel)]="email"  name="email" type="email" placeholder="Enter your email" required />
+                    <label>Price (in Pesos)</label>
+                    <input [(ngModel)]="price"  name="price" type="number" placeholder="Enter price" required />
                 </div>
-            <button type="submit">Register</button>
+        
+            <button type="submit">Save</button>
             </form>
         </div>
     </div>
