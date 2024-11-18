@@ -3,25 +3,27 @@
     <top-nav></top-nav>
     <!-- Body -->
     <div class="section-body">
+
+
         <div class="header">
-            <h3 class="left-header-small">"LOOKING TO UPSKILL?</h3>
-            <h1 class="left-header-big">Start learning a new skill today"</h1>
+            <h3 class="header-small">LOOKING TO UPSKILL?</h3>
+            <h1 class="header-big">Start learning a new skill today.</h1>
         </div>
 
         <div class="container">
             <header>Registration Form</header>
-            <form (ngSubmit)="onSubmit()" class="form">
+            <form (ngSubmit)="onSubmit()" class="form" name="myForm">
             <div class="column">
                 <div class="input-box">
                 <label>First Name</label>
-                <input [(ngModel)]="firstName"  name="firstName" type="text" placeholder="Enter First Name" required #firstNameRef="ngModel"/>
+                <input [(ngModel)]="firstName"  name="firstName" type="text" placeholder="Enter First Name" required />
+                
+                <span ng-show="myForm.firstName.$touched && myForm.firstName.$invalid">The name is required.</span>
+                </div>
 
 
-                <!-- Error Messages -->
-                <div *ngIf="firstNameRef.invalid && firstNameRef.touched" class="error-messages">
-                <p *ngIf="firstNameRef.errors?.required">First Name is required.</p>
-                </div>
-                </div>
+
+
 
                 <div class="input-box">
                 <label>Last Name</label>
@@ -78,5 +80,16 @@
             </form>
         </div>
     </div>
+
+
+
+    <script>
+    var app = angular.module('myApp', []);
+    app.controller('validateCtrl', function($scope) {
+      $scope.user = 'John Doe';
+      $scope.email = 'john.doe@gmail.com';
+    });
+</script>
   </section>
+
   

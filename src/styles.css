@@ -1,3 +1,4 @@
+/* You can add global styles to this file, and also import other style files */
 .error-messages {
   color: red;
   font-size: 0.875rem;
@@ -5,4 +6,4 @@
 
 input.ng-touched.ng-invalid {
   border: 1px solid red;
-}/* You can add global styles to this file, and also import other style files */
+}

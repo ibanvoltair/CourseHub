@@ -160,14 +160,17 @@ li {
   border-radius: 4px;
 }
 
-
-.left-header-small {
+.header-small {
   color: white;
-  font-size: 25px;
-  z-index: 1;
+  font-size: 35px;
+  margin-left: 100px;
 }
-.left-header-big {
+
+.header-big {
   color: white;
-  font-size: 60px;
-  z-index: 1;
+  font-size: 55px;
+}
+
+.header {
+  z-index: 999;
 }
