@@ -159,3 +159,19 @@ li {
   border: 1px solid #ddd;
   border-radius: 4px;
 }
+
+
+.header-small {
+  color: white;
+  font-size: 35px;
+  margin-left: 100px;
+}
+
+.header-big {
+  color: white;
+  font-size: 55px;
+}
+
+.header {
+  z-index: 999;
+}
