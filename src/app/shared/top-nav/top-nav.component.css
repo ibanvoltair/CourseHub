@@ -1,0 +1,63 @@
+nav {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+nav a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+header {
+    z-index: 1;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;  
+    color: white;
+    text-align: center;
+    padding: 60px 20px;
+    position: relative;
+    height: 40vh;
+}
+
+header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(5, 29, 64, 0.5); /* #051d40 with 50% opacity */
+   /*  min-height: 100vh;
+    height: 100vh;
+    width:100%; */
+  }
+
+/* Logo and Nav */
+.logo {
+    width: 200px;
+    height: 200px;
+    font-size: 24px;
+    font-weight: bold;
+   /*  text-align: left; */
+    padding: -50px 20px;
+    color: white;
+    margin: -50px, 0, 0 50px;
+   /*  display: inline-block; */
+    position: absolute;
+    background-size: contain;
+  background-repeat: no-repeat;
+  background-image: url("../../../assets/svg/CourseHubLogoForDarkBackground.svg");
+}
+
+.cta-button {
+    background: rgb(130, 106, 251);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: bold;
+}

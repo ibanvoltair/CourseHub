@@ -1,0 +1,55 @@
+<section>
+    <!-- Nav -->
+    <top-nav></top-nav>
+    <!-- Body -->
+    <div class="section-body">
+       <!--  <div class="header">
+
+        </div> -->
+
+        <div class="container">
+            <header>Add a Course | Book </header>
+            <form (ngSubmit)="onSubmit()" class="form">
+            <div class="column">
+                <div class="input-box">
+                <label>Course or Book Name</label>
+                <input [(ngModel)]="course"  name="course or book name" type="text" placeholder="Enter Course / Book name" required />
+                </div>
+              <!--   <div class="input-box">
+                <label>Last Name</label>
+                <input [(ngModel)]="lastName" name="lastName" type="text" placeholder="Enter Last Name" required />
+                </div> -->
+            </div>
+        
+            <div class="input-box">
+                <label>Author</label>
+                <input [(ngModel)]="author" name="author" type="author" placeholder="Enter author's name" required />
+            </div>
+        
+            <div class="input-box">
+                <label>Image Url</label>
+                <input [(ngModel)]="imageUrl" name="imageUrl" type="imageUrl" placeholder="Image link" required />
+            </div>
+        
+        <!--     <div class="column">
+                <div class="input-box">
+                <label>Phone Number</label>
+                <input [(ngModel)]="phoneNumber" name="phoneNumber" type="number" placeholder="Enter phone number" required />
+                </div>
+                <div class="input-box">
+                <label>Birth Date</label>
+                <input [(ngModel)]="birthDate" name="birthDate" type="date" required />
+                </div>
+            </div> -->
+        
+                <div class="input-box">
+                    <label>Price (in Pesos)</label>
+                    <input [(ngModel)]="price"  name="price" type="number" placeholder="Enter price" required />
+                </div>
+        
+            <button type="submit">Save</button>
+            </form>
+        </div>
+    </div>
+  </section>
+  
