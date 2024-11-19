@@ -8,6 +8,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { HomeComponent } from 'features/registration/home.component';
 import { CoursesComponent } from 'features/registration/courses.component';
+import { FetchAllUsersComponent } from './features/fetch-all-users/fetch-all-users.component';
 import { UserService } from 'services/user.service';
 /* import { TopNavComponent } from 'shared/top-nav/top-nav.component'; */
 
@@ -16,6 +17,7 @@ import { UserService } from 'services/user.service';
     AppComponent,
     HomeComponent,
     CoursesComponent,
+    FetchAllUsersComponent,
     /* TopNavComponent */
   ],
   imports: [
