@@ -9,6 +9,7 @@ import { FormsModule } from '@angular/forms';
 import { HomeComponent } from 'features/registration/home.component';
 import { CoursesComponent } from 'features/registration/courses.component';
 import { FetchAllUsersComponent } from './features/fetch-all-users/fetch-all-users.component';
+import { FetchAllBooksComponent } from './features/fetch-all-books/fetch-all-books.component';
 import { UserService } from 'services/user.service';
 /* import { TopNavComponent } from 'shared/top-nav/top-nav.component'; */
 
@@ -18,6 +19,7 @@ import { UserService } from 'services/user.service';
     HomeComponent,
     CoursesComponent,
     FetchAllUsersComponent,
+    FetchAllBooksComponent,
     /* TopNavComponent */
   ],
   imports: [
