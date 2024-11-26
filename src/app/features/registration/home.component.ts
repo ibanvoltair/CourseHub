@@ -1,4 +1,5 @@
 import { Component, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { UserService } from '../../services/user.service';  // import the user service
 import { FormsModule } from '@angular/forms';  // Import FormsModule here
 import { RouterModule, Router } from '@angular/router';
@@ -6,7 +7,7 @@ import { TopNavComponent } from '../../shared/top-nav/top-nav.component';
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [ FormsModule, RouterModule, TopNavComponent ],
+  imports: [ CommonModule, FormsModule, RouterModule, TopNavComponent ],
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss'],
   schemas: [CUSTOM_ELEMENTS_SCHEMA] // Add this line
